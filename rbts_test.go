@@ -24,14 +24,14 @@ func TestNewSeriesRandomVals(t *testing.T) {
 		s.Push(uint8(i), TruncatedFNV64(uuid.New().String()))
 		// log.Println(s.Bytes())
 	}
-	log.Println(s.Bytes())
-	log.Println(len(s.Bytes()))
+	// log.Println(s.Bytes())
+	log.Printf("%d bytes (TestNewSeriesRandomVals)", len(s.Bytes()))
 
-	it := s.Iter()
-	for it.Next() {
-		id, val := it.Values()
-		log.Printf("id=%d val=%d", id, val)
-	}
+	// it := s.Iter()
+	// for it.Next() {
+	// 	id, val := it.Values()
+	// 	log.Printf("id=%d val=%d", id, val)
+	// }
 }
 
 func TestNewSeriesSameVal(t *testing.T) {
@@ -41,14 +41,14 @@ func TestNewSeriesSameVal(t *testing.T) {
 		s.Push(uint8(i), val)
 		// log.Println(s.Bytes())
 	}
-	log.Println(s.Bytes())
-	log.Println(len(s.Bytes()))
+	// log.Println(s.Bytes())
+	log.Printf("%d bytes (TestNewSeriesSameVal)", len(s.Bytes()))
 
-	it := s.Iter()
-	for it.Next() {
-		id, val := it.Values()
-		log.Printf("id=%d val=%d", id, val)
-	}
+	// it := s.Iter()
+	// for it.Next() {
+	// 	id, val := it.Values()
+	// 	log.Printf("id=%d val=%d", id, val)
+	// }
 }
 
 func TestNewSeriesFlappingVal(t *testing.T) {
@@ -63,14 +63,14 @@ func TestNewSeriesFlappingVal(t *testing.T) {
 		}
 		// log.Println(s.Bytes())
 	}
-	log.Println(s.Bytes())
-	log.Println(len(s.Bytes()))
+	// log.Println(s.Bytes())
+	log.Printf("%d bytes (TestNewSeriesFlappingVal)", len(s.Bytes()))
 
-	it := s.Iter()
-	for it.Next() {
-		id, val := it.Values()
-		log.Printf("id=%d val=%d", id, val)
-	}
+	// it := s.Iter()
+	// for it.Next() {
+	// 	id, val := it.Values()
+	// 	log.Printf("id=%d val=%d", id, val)
+	// }
 }
 
 func TestNewSeriesRandomFlappingVal(t *testing.T) {
@@ -85,12 +85,12 @@ func TestNewSeriesRandomFlappingVal(t *testing.T) {
 		}
 		// log.Println(s.Bytes())
 	}
-	log.Println(s.Bytes())
-	log.Println(len(s.Bytes()))
+	// log.Println(s.Bytes())
+	log.Printf("%d bytes (TestNewSeriesRandomFlappingVal)", len(s.Bytes()))
 
-	it := s.Iter()
-	for it.Next() {
-		id, val := it.Values()
-		log.Printf("id=%d val=%d", id, val)
-	}
+	// it := s.Iter()
+	// for it.Next() {
+	// 	id, val := it.Values()
+	// 	log.Printf("id=%d val=%d", id, val)
+	// }
 }
